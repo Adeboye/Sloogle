@@ -7,6 +7,9 @@
     "start": "grunt",
     "test": "grunt test"
   },
+  "engines": {
+    "node": "6.3.1"
+  },
   "author": "Boye",
   "dependencies": {
     "body-parser": "^1.15.2",
