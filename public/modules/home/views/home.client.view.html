@@ -1,0 +1,45 @@
+<div data-ng-controller="PhotoController"/>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span class="md-flex">Sloogle Search</span>
+    </div>
+  </md-toolbar>
+
+  <md-content layout="column" layout-align="center center">
+    <div class="app-content">
+     <form ng-submit="search(searchTerm, 1, true)">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input long" type="text" id="sample3" placeholder="Search..." ng-model="searchTerm">
+          <label class="mdl-textfield__label" for="sample3" ></label>
+        </div>
+      </form>
+
+      <br/>
+      <br/>
+    
+    <div class="pagination">
+      <cl-paging flex cl-pages="paging.total" cl-steps="6" cl-page-changed="paging.onPageChanged()" cl-align="center center" cl-current-page="paging.current"></cl-paging> 
+    </div>
+
+    <br/>
+      <div class="mdl-grid">
+        <div ng-repeat="picture in results" class="mdl-cell mdl-cell--4-col mdl-cell--stretch">
+	        <div ng-style="{'background-image':'url({{picture.urls.small}})'}" class="grid_image mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand"></div>
+            <div class="mdl-card__actions caption">
+              <h5 class="title">{{picture.user.name}}</h5>
+              <div class="mdl-layout-spacer"></div>
+              <button class="like mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" ng-click=favorite(picture)>
+                <i class="material-icons">favorite</i>
+                <span class="_2ER2Y _3YIV2">{{picture.slooglelike}}</span>
+              </button>
+              <button class="download mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" ng-click="download(picture)">
+                <i class="material-icons">file_download</i>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </md-content>   
+</div>

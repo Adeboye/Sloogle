@@ -1,0 +1,72 @@
+.app-content {
+  width: 100%;
+}
+
+form{
+  padding: 10px 30px 20px 25px;
+}
+
+md-input-group.long > input {
+  width: 100%;
+}
+
+body {
+  padding: 20px;
+  background: #fafafa;
+  position: relative;
+}
+
+md-card {
+  margin: 0 30px 25px 30px
+}
+.mdl-grid .grid_image {
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+.mdl-grid .grid_image .caption {
+  background: rgba(0, 0, 0, 0.2);
+  
+  display: none;
+}
+.mdl-grid .grid_image:hover .caption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-transition: all ease-in-out .15s;
+  -moz-transition: all ease-in-out .15s;
+  transition: all ease-in-out .15s;
+}
+.mdl-grid .grid_image .title {
+  margin: 0;
+  float: left;
+  display: inline-block;
+  color: #ffffff;
+}
+.mdl-grid .grid_image button {
+  margin-left: 10px;
+  /*float: right;*/
+  display: inline-block;
+}
+md-card .caption {
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+}
+md-card .caption .title {
+
+}
+md-card .caption button {
+    margin-left: 10px;
+    float: right;
+}
+._2ER2Y {
+  display: inline-block;
+  margin-left: 5px
+}
+
+._3Y1V2 {
+  float: left;
+}
